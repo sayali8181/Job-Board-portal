@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('work.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+        }
+        </style>
+        </body>
+    <header>
+        <div class="container">
+            <h1>Job Board</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="utilities">
+                    <input type="text" id="searchInput" placeholder="Search Jobs" oninput="searchJobs()">
+                    <button class="find-job-btn" onclick="findJobs()">Find Your Job</button>
+                    <button class="login-btn" onclick="findJobs()">login</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="job-list">
+            <div class="job" onclick="toggleDescription(this)">
+                <h3>Web Developer</h3>
+                <p class="info">Company : NK Technologies</p>
+                <p class="info">Location : Pune</p>
+                <p class="description">Join our innovative team and contribute to cutting-edge web development projects.</p>
+                <button class="apply-btn" onclick="applyNow()">Apply Now</button>
+            </div>
+
+            <div class="job" onclick="toggleDescription(this)">
+                <h3>UX Designer</h3>
+                <p class="info">Company : Design Studio</p>
+                <p class="info">Location : Mumbai</p>
+                <p class="description">Shape user experiences with your creative designs. We are looking for a UX Designer passionate about creating intuitive and visually appealing interfaces.</p>
+                <button class="apply-btn" onclick="applyNow()">Apply Now</button>
+            </div>
+
+            <div class="job" onclick="toggleDescription(this)">
+                <h3>Full Stack Developer</h3>
+                <p class="info">Company : PHN Tech Solutions</p>
+                <p class="info">Location : Pune</p>
+                <p class="description">Work on end-to-end solutions with our dynamic team. If you're a Full Stack Developer seeking exciting challenges and opportunities for growth, apply now.</p>
+                <button class="apply-btn" onclick="applyNow()">Apply Now</button>
+            </div>
+            <div class="job" onclick="toggleDescription(this)">
+                <h3>Cloud Architect</h3>
+                <p class="info">Company : ZenTech</p>
+                <p class="info">Location : Pune</p>
+                <p class="description">Work on end-to-end solutions with our dynamic team. If you're a Full Stack Developer seeking exciting challenges and opportunities for growth, apply now.</p>
+                <button class="apply-btn" onclick="applyNow()">Apply Now</button>
+            </div>
+            <div class="job" onclick="toggleDescription(this)">
+                <h3> Software Developer</h3>
+                <p class="info">Company : Electra Tech</p>
+                <p class="info">Location : Pune</p>
+                <p class="description">Work on end-to-end solutions with our dynamic team. If you're a Full Stack Developer seeking exciting challenges and opportunities for growth, apply now.</p>
+                <button class="apply-btn" onclick="applyNow()">Apply Now</button>
+            </div>
+            <div class="job" onclick="toggleDescription(this)">
+                <h3> Android Developer</h3>
+                <p class="info">Company :InnoVision</p>
+                <p class="info">Location : Pune</p>
+                <p class="description">Work on end-to-end solutions with our dynamic team. If you're a Full Stack Developer seeking exciting challenges and opportunities for growth, apply now.</p>
+                <button class="apply-btn" onclick="applyNow()">Apply Now</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Board</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDescription(element) {
+            const description = element.querySelector('.description');
+            description.classList.toggle('show');
+        }
+
+        function applyNow() {
+            alert("Application Submitted!");
+        }
+
+        function searchJobs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const jobs = document.querySelectorAll('.job');
+
+            jobs.forEach(job => {
+                const title = job.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    job.style.display = 'block';
+                } else {
+                    job.style.display = 'none';
+                }
+            });
+        }
+
+        function findJobs() {
+            alert("Finding your dream job!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+body {
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("Reasons-you-didnt-get-the-job.jpeg");
+    background-size: cover;
+    color: #333333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgba(26, 25, 23, 0.511); /* Dark Blue */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #131312;
+}
+
+.utilities {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 370px;
+}
+
+.find-job-btn {
+    background-color: #3498db; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: #4a4b52e4; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0px 2px 0px 10px;
+}
+
+
+.find-job-btn:hover {
+    background-color: #c8bf5d; 
+}
+
+.login-link {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #3f3f3d;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.job-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.job {
+    background-color: #00000060;
+    border: 1px solid #4f4949;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.job:hover {
+    transform: scale(1.05);
+    background-color: #000000;
+    border: 1px solid #4f4949;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.job h3 {
+    background-color: #b18f20cc;
+    color: #d3c2c2;
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.job p {
+    padding: 15px;
+    margin: 0;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.description {
+    display: none;
+    padding: 15px;
+    color: #333;
+}
+
+.description.show {
+    display: block;
+}
+
+.apply-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #2ecc7077;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #27ae60; 
+}
+
+footer {
+    background-color: #2e2e2be8;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin:0;
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .utilities {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #searchInput {
+        margin-bottom: 10px;
+    }
+
+    .find-job-btn {
+        margin-top: 10px;
+    }
+
+    .login-link {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .job {
+        width: 100%;
+    }
+}
